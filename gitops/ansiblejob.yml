@@ -1,0 +1,9 @@
+apiVersion: batch/v1
+kind: AnsibleJob
+metadata:
+  generateName: deploy-webserver-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+spec:
+  connection_secret: aap_connection_secret
+  job_template_name: deploy_webserver
