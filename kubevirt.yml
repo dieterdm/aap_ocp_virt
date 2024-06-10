@@ -3,3 +3,4 @@ connections:
   - validate_certs: false
     namespaces:
       - dieter-tech-day
+    label_selector: app=test
